@@ -6,7 +6,7 @@ export const Sections = styled.section`
     padding-top: ${p => p.theme.space[4]}px;
     padding-bottom: ${p => p.theme.space[4]}px;
     min-width: 380px;
-    width: 50vw;
+    width: 95vw;
     box-shadow: ${p => p.theme.shadows.mainShadow};
 
     &:not(:first-child){

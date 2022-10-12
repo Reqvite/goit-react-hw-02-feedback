@@ -5,8 +5,9 @@ import { theme } from 'theme/theme';
 
 import { Container } from './Container/Container';
 import { Section } from './Section/Section';
+import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions'
 import { Statistics } from './Statistics/Statistics';
-import {FeedbackOptions} from './FeedbackOptions/FeedbackOptions'
+import { Notification } from './Notifications/Notification';
 
 export class App extends Component{
   state = {
@@ -42,6 +43,7 @@ export class App extends Component{
         <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.handleBtn} />
         </Section>
         <Section title='Statistic'>
+        <Notification message="There is no feedback"></Notification>
         <Statistics
           good={good}
           neutral={neutral}
