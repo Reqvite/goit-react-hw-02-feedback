@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
  StatisticList,
     StatisticListItem, StatisticValue
@@ -13,4 +15,12 @@ export const Statistics = ({ good, neutral, bad, total, positivePersantage }) =>
                 <StatisticListItem>Positive feedback:<StatisticValue>{positivePersantage}%</StatisticValue></StatisticListItem>
         </StatisticList> 
         )
+}
+
+Statistics.propTypes = {
+    good: PropTypes.number,
+    neutral: PropTypes.number,
+    bad: PropTypes.number,
+    total: PropTypes.number,
+    positivePersantage: PropTypes.number,
 }

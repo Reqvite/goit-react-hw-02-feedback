@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
     ButtonList, ButtonListItem, MainButton
 } from "./FeedbackOptions.style";
@@ -14,3 +16,8 @@ export const FeedbackOptions = (({options, onLeaveFeedback}) => {
             </ButtonList> 
     )
 })
+
+FeedbackOptions.propTypes = {
+    options: PropTypes.array,
+    onLeaveFeedback: PropTypes.func,
+}
