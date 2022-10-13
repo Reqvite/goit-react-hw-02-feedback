@@ -7,7 +7,7 @@ import { Container } from './Container/Container';
 import { Section } from './Section/Section';
 import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions'
 import { Statistics } from './Statistics/Statistics';
-import { Notification } from './Notifications/Notification';
+import { Notification } from './Notification/Notification';
 
 export class App extends Component{
   state = {
@@ -43,13 +43,15 @@ export class App extends Component{
         <FeedbackOptions options={Object.keys(this.state)} onLeaveFeedback={this.handleBtn} />
         </Section>
         <Section title='Statistic'>
-        <Notification message="There is no feedback"></Notification>
-        <Statistics
+          {total > 0
+          ? <Statistics
           good={good}
           neutral={neutral}
           bad={bad}
           total={total}
-            positivePersantage={positivePersantage} />   
+          positivePersantage={positivePersantage} />
+          : <Notification message="There is no feedback"></Notification>
+          }
           </Section>
        </Container>
       </ThemeProvider>

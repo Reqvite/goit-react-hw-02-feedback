@@ -10,6 +10,7 @@ export const ButtonListItem = styled.li`
     &:not(:first-child){
         margin-left: ${p => p.theme.space[2]}px;
     }
+    
 `
 
 export const MainButton = styled.button`
@@ -18,7 +19,8 @@ export const MainButton = styled.button`
   align-items: center;
   cursor: pointer;
   background-color: transparent;
-  font-size: ${p => p.theme.fontSizes[3]}px;
+  font-size: ${p => p.theme.fontSizes[2]}px;
+  font-weight: ${p => p.theme.fontWeights.bold};
   width: 100px;
   height: 40px;
 
@@ -35,7 +37,6 @@ export const MainButton = styled.button`
     background-color: ${p => p.theme.colors.hoverColor};
   }
 
-   &::first-letter{
+  
     text-transform: uppercase;
-}
 `
