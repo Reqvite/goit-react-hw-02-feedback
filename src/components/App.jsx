@@ -35,7 +35,9 @@ export class App extends Component{
 
   render() {
     const { good, neutral, bad } = this.state;
+
     const total = this.countTotalFeedback();
+    
     const positivePersantage = this.countPositiveFeedbackPercentage(total);
     return <ThemeProvider theme={theme}>
       <Container display="flex" flexDirection="column" alignItems="center" padding="3">
